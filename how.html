@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>How it Works</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="about.html">MARKETVISTA?</a></li>
+                <li>
+                    <a href="index.html"><img src="assets/logo.png" alt="MarketVista" id="logo" /></a>
+                </li>
+                <li><a href="how.html" class="currentpage">HOW IT WORKS</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    
+    <div class="mathtoprow">
+        <section>
+            <h2>The Black-Scholes Model</h2>
+            <p>MarketVista utilizes the Black-Scholes model, a common method of estimating European options' prices. The formula, as displayed by Wikipedia and implemented in Javascript (with modifications), is displayed here. Using just the underlying stock price, the option strike, the time till maturity, underlying implied volatility, and the risk-free interest rate, the model returns a projected price for the instrument. MarketVista allows you to manipulate each of these variables and instantly see the resulting price. </p>
+        </section>
+
+        <section class="formulasection">
+            <h2>Formula</h2>
+            <img alt="Black Scholes" src="assets/math.png" width="480" invert/>
+        </section>
+        
+    </div>
+    
+    
+    
+    <div class="mathbottomrow">
+        <section>
+            <h2>The Greeks</h2>
+            <p>MarketVista displays option greeks when you hover your cursor over the readout. Here are some tips for understanding them: </p>
+            <ul>
+                <li>Delta: How your position reacts to a one dollar increase in underlying price. If it is positive, then you are long the underlying at that price/IV point; if it is negative, you are short. </li>
+                <li>Gamma: The first derivative of delta with respect to underlying price. If it is positive, your delta increases with a one dollar increase in underlying price; if it is negative, your delta will decrease. </li>
+                <li>Theta: Time decay. If it is negative, then you are losing that amount per day as the option decays. If it is positive, then you are gaining that amount daily. </li>
+                <li>Vega: How your position reacts to a 1% increase volatility. If it is positive, you are long volatility; if it is negative, you are short volatility. </li>
+                <li>Rho: How your position to reacts to a 1% change in interest rates. If it is positive, you benefit from higher interest rates. </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>The Readout</h2>
+            <p>MarketVista is designed for you to focus on standard deviation moves, rather than dollar price moves. Therefore, you may have noticed that the system automatically recalibrates the price axis when volatility is adjusted (since volatility affects standard deviation calculations). Similarly, the price adjustment knob is marked in terms of standard deviations. </p>
+            <p>The MarketVista application readout operates like a progressive-scan television. MarketVista creates a low fidelity matrix of underlying price and IV combinations using your input bounds and brute-forces the simulated P/L for every leg in your position at every point in the matrix. The system then analyzes the overall P/L and scales the result to a two-dimensional color space -- the intuitive graph that your browser displays. </p>
+        </section>
+    </div>
+    
+    
+    <footer>
+        <div class="copyright"><p>&copy; 2019 Venkata Alapati. MarketVista is &trade; and &copy; 2018-20 Venkata Alapati. All rights reserved.</p></div>
+    </footer>
+    
+</body>
+
+</html>

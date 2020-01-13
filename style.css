@@ -1,0 +1,522 @@
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    background-image: url("assets/background.png");
+    min-width: 680px;
+}
+
+header {
+    font-family: 'Palatino', serif;
+    margin-left: 4em;
+    margin-right: 4em;
+    margin-top: 3em;
+    margin-bottom: 3.5em;
+    text-align: center;
+    color: white;
+}
+
+
+.currentpage {
+    background-image: url("assets/steel5.png");
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border: 2px solid grey;
+    padding: 2px;
+    background-color: white;
+}
+
+#logo {
+    display: inline-block;
+    width: 7em;
+    height: 7em;
+    margin: -3.5em;
+}
+
+#logo:hover {
+    display: inline-block;
+    width: 8em;
+    height: 8em;
+    margin: -4em;
+}
+
+nav ul {
+    text-align: center;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-top: 0em;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    border-style: solid;
+    border-width: 10px;
+    background-image: url("assets/silver2.jpeg");
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-border-image: url("assets/white2.jpg") 7% repeat;
+    /* Safari 3.1-5 */
+    -o-border-image: url("assets/white2.jpg") 7% repeat;
+    /* Opera 11-12.1 */
+    border-image: url("assets/white2.jpg") 7% repeat;
+}
+
+nav li {
+    flex: 1;
+    padding: 0.24em;
+    font-weight: 600;
+}
+
+nav li a {
+    text-decoration: none;
+}
+
+nav li a:link {
+    color: #0000aa;
+}
+
+nav li a:visited {
+    color: #0000aa;
+}
+
+nav li a:hover {
+    color: #0055ff;
+}
+
+nav li a:active {
+    color: #ff0000;
+}
+
+.abouttoprow,
+.mathtoprow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.aboutbottomrow,
+.mathbottomrow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.abouttoprow {
+    align-items: center;
+}
+
+section {
+    font-family: 'Palatino', serif;
+    margin: 1em;
+    padding: 1em;
+    max-width: 480px;
+    color: black;
+    background-image: url("assets/white.jpg");
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-style: solid;
+    border-width: 10px;
+    -webkit-border-image: url("assets/white2.jpg") 7% repeat;
+    /* Safari 3.1-5 */
+    -o-border-image: url("assets/white2.jpg") 7% repeat;
+    /* Opera 11-12.1 */
+    border-image: url("assets/white2.jpg") 7% repeat;
+}
+
+.stretchsection {
+    max-width: none;
+    padding: 0;
+    height: 360px;
+}
+
+.whatsection {
+    max-width: 420px;
+}
+
+h2 {
+    text-align: center;
+}
+
+footer {
+    padding: 1em;
+}
+
+.copyright {
+    font-family: 'Palatino', serif;
+    color: white;
+    text-align: center;
+}
+
+.disclaimer {
+    color: white;
+    font-family: 'Palatino', serif;
+    font-size: 0.75em;
+    text-align: justify;
+}
+
+.topcorner {
+    color: white;
+    font-size: 0.75em;
+    padding: 2px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+/* APPLICATION STYLING */
+
+.textbox {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    font-family: monospace;
+    font-size: 1.2em;
+    background-color: rgba(255, 255, 100, 0.6);
+}
+
+.radiolabel {
+    background-color: rgba(255, 255, 100, 0.6);
+}
+
+.slider {}
+
+.smallinput {
+    width: 4em;
+}
+
+.smallerinput {
+    width: 2.4em;
+}
+
+td {
+    text-align: center;
+}
+
+#controls th {
+    text-align: left;
+    border-right: 1px solid white;
+    border-top: 2px solid transparent;
+}
+
+#controls tr {
+    outline: 1px solid white;
+}
+
+#legTable,
+#dashboard,
+#controls {
+    border-style: solid;
+    border-width: 10px;
+    -webkit-border-image: url("assets/white2.jpg") 7% repeat;
+    /* Safari 3.1-5 */
+    -o-border-image: url("assets/white2.jpg") 7% repeat;
+    /* Opera 11-12.1 */
+    border-image: url("assets/white2.jpg") 7% repeat;
+}
+
+#pvtgraph {
+    border-style: solid;
+    border-width: 10px;
+    -webkit-border-image: url("assets/white2.jpg") 7% repeat;
+    /* Safari 3.1-5 */
+    -o-border-image: url("assets/white2.jpg") 7% repeat;
+    /* Opera 11-12.1 */
+    border-image: url("assets/white2.jpg") 7% repeat;
+}
+
+.legrow {
+    margin-left: 4em;
+    margin-right: 4em;
+    margin-bottom: 1em;
+    margin-top: 1.5em;
+}
+
+#dashboard td,
+#dashboard th {
+    outline: 1px solid white;
+    border-collapse: collapse;
+    width: 33%;
+}
+
+.dashboard_heading {
+    font-weight: 600;
+    width: 100%;
+    background: rgba(100, 100, 100, 0.3);
+    display: inline-block;
+    margin-bottom: 0.1em;
+    padding: 0.1em;
+    white-space: nowrap;
+}
+
+.dashboard_pl {
+    width: 100%;
+    background: rgba(100, 100, 100, 0.3);
+    display: inline-block;
+    font-size: 2em;
+}
+
+.dashboard_heading_date {
+    width: 100%;
+    background: rgba(0, 100, 255, 0.5);
+    display: inline-block;
+    margin-bottom: 0.1em;
+    padding: 0.1em;
+    white-space: wrap;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+#dashboard th,
+#controls th,
+#legTable th {
+    background-image: url("assets/silver.jpg");
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#dashboard_title,
+#controls_title,
+#legTable_title {
+    font-weight: 700;
+    text-align: center !important;
+    border: none !important;
+    background-image: url("assets/silver2.jpeg") !important;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#legTable tr {
+    outline: 1px solid white;
+    background-image: url("assets/silver2.jpeg");
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#btn_addrow {
+    //background-image: url("assets/silver2.jpeg");
+    background-position: center;
+    background-size: 1em 3em;
+}
+
+#btn_animate {
+    padding: 0;
+    margin: 0;
+    float: right;
+}
+
+
+/* APPLICATION LAYOUT STYLING */
+
+.branding {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_left {
+    flex: 1;
+}
+
+.header_center {
+    flex: 1000;
+}
+
+.header_right {
+    flex: 1;
+}
+
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.middlerow {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+
+.graphcluster {
+    display: flex;
+    justify-content: space-around;
+    margin: 2em;
+}
+
+.leftcluster {
+    min-width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 1em;
+}
+
+#controls {
+    margin-right: 1em;
+    background-image: url("assets/white.jpg");
+    background-position: center;
+    background-size: 1em 3em;
+}
+
+#dashboard {
+    margin-left: 1em;
+    background-image: url("assets/white.jpg");
+    background-position: center;
+    background-size: 1em 3em;
+}
+
+#legTable {
+    background-image: url("assets/white.jpg");
+    background-position: center;
+    background-size: 1em 3em;
+}
+
+@media (min-width:1140px) {
+    .leftcluster {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0em;
+    }
+    #controls {
+        margin-right: 0em;
+        margin-bottom: 1em;
+    }
+    #dashboard {
+        margin-left: 0em;
+        margin-top: 1em;
+    }
+}
+
+.centercluster {
+    min-width: 768px;
+}
+
+
+
+
+/* The following input styling was generated by a website */
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 6px 0;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    box-shadow: 2px 2px 3.1px #000023, 0px 0px 2px #00003d;
+    background: #009bff;
+    border-radius: 5px;
+    border: 0.3px solid #787878;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 4.6px 4.6px 8.4px rgba(190, 190, 190, 0.62), 0px 0px 4.6px rgba(203, 203, 203, 0.62);
+    border: 1px solid #dbdbdc;
+    height: 16px;
+    width: 16px;
+    border-radius: 16px;
+    background: rgba(0, 30, 255, 0.84);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -6.3px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #009bff;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    box-shadow: 2px 2px 3.1px #000023, 0px 0px 2px #00003d;
+    background: #009bff;
+    border-radius: 5px;
+    border: 0.3px solid #787878;
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 4.6px 4.6px 8.4px rgba(190, 190, 190, 0.62), 0px 0px 4.6px rgba(203, 203, 203, 0.62);
+    border: 1px solid #dbdbdc;
+    height: 16px;
+    width: 16px;
+    border-radius: 16px;
+    background: rgba(0, 30, 255, 0.84);
+    cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #009bff;
+    border: 0.3px solid #787878;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3.1px #000023, 0px 0px 2px #00003d;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #009bff;
+    border: 0.3px solid #787878;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3.1px #000023, 0px 0px 2px #00003d;
+}
+
+input[type=range]::-ms-thumb {
+    box-shadow: 4.6px 4.6px 8.4px rgba(190, 190, 190, 0.62), 0px 0px 4.6px rgba(203, 203, 203, 0.62);
+    border: 1px solid #dbdbdc;
+    height: 16px;
+    width: 16px;
+    border-radius: 16px;
+    background: rgba(0, 30, 255, 0.84);
+    cursor: pointer;
+    height: 4px;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #009bff;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #009bff;
+}

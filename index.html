@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<!--COPYRIGHT 2018-2020 KingVA LLC.-->
+
+<head>
+    <title>MarketVista</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+</head>
+
+<body onload="initialize()">
+
+    <header>
+
+        <div class="topcorner">KingVA LLC</div>
+
+        <nav>
+            <ul>
+                <li><a href="about.html">MARKETVISTA?</a></li>
+                <li>
+                    <a href="index.html" class=currentpage><img src="assets/logo.png" alt="MarketVista" id="logo" /></a>
+                </li>
+                <li><a href="how.html">HOW IT WORKS</a></li>
+            </ul>
+        </nav>
+
+
+    </header>
+
+
+
+    <div class="application">
+
+        <div class="middlerow">
+
+          <div class="graphcluster">
+            <canvas id="pvtgraph" width="640" height="480">
+                        Your browser does not support the canvas element. In order to use this application, please update your browser.
+            </canvas>
+          </div>
+
+          <div class="leftcluster">      
+                <table id="controls">
+                    <tr>
+                        <td id="controls_title" colspan="4">PARAMETERS</td>
+                    </tr>
+
+                    <tr>
+                        <th colspan="2">Time
+                            <input type="image" src="assets/rewind.png" name="btn_animate" alt="Animate" width="16" height="16" id="btn_animate" onclick="animateTime(true)" /> </th>
+                        <td><label id="lbl_timeleft"></label></td>
+                        <td><input type="range" name="sel_timeleft" class="slider" step="1" value="10000" onchange="update();" oninput="update();" disabled /></td>
+                    </tr>
+
+                    <tr>
+                        <th colspan="2">Price</th>
+                        <td>$<input type="number" class="smallinput textbox" name="sel_price" value="100" onchange="update();" /></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th colspan="2">STDEV Range</th>
+                        <td><label id="lbl_stdev"></label></td>
+                        <td><input type="range" id="sel_stdev" name="sel_stdev" class="slider" value="1" step="0.1" min="0" max="3" onchange="update();" oninput="update();" /></td>
+                    </tr>
+
+                    <tr>
+                        <th colspan="2">IV</th>
+                        <td><span class="nowrap"> <input type="number" class="smallerinput textbox" name="sel_vol" value="16" onchange="update();" />%</span></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th colspan="2">IV Range</th>
+                        <td><label id="lbl_volrange"></label></td>
+                        <td><input type="range" class="slider" name="sel_volrange" step="1" value="10" onchange="update();" oninput="update();" disabled/></td>
+                    </tr>
+
+                    <tr>
+                        <th colspan="2">Risk Free Rate</th>
+                        <td><input type="number" id="sel_riskfree" name="sel_riskfree" class="smallerinput textbox" value="2" onchange="update();" />%</td>
+                        <td></td>
+                    </tr>
+                                        
+                </table>
+
+                <table id="dashboard">
+                    <tr>
+                        <td id="dashboard_title" colspan="3">DASHBOARD</td>
+                    </tr>
+
+                    <tr>
+                        <td id="d_date">
+                            <span class="dashboard_heading dashboard_heading_date">Date</span><br />.
+                        </td>
+
+                        <td id="d_stockprice">
+                            <span class="dashboard_heading dashboard_heading_stockprice">Stock Price</span><br />.
+                        </td>
+
+                        <td id="d_vol">
+                            <span class="dashboard_heading dashboard_heading_iv">IV</span><br />.
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td colspan="3" id="d_pl">
+                            <span class="dashboard_heading dashboard_heading_pl">$ P/L</span><br /><span class="dashboard_pl">.</span>
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" id="d_delta">
+                            <span class="dashboard_heading dashboard_heading_delta">Delta</span><br />.
+                        </td>
+
+
+                        <td id="d_theta">
+                            <span class="dashboard_heading dashboard_heading_theta">Theta</span><br />.
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td id="d_gamma">
+                            <span class="dashboard_heading dashboard_heading_gamma">Gamma</span><br />.
+                        </td>
+
+                        <td id="d_vega">
+                            <span class="dashboard_heading dashboard_heading_vega">Vega</span><br />.
+                        </td>
+
+                        <td id="d_rho">
+                            <span class="dashboard_heading dashboard_heading_rho">Rho</span><br />.
+                        </td>
+                    </tr>
+       
+                </table>
+            </div>
+
+        </div>
+
+
+        <div class="legrow">
+            <table id="legTable" style="width:100%">
+                <tr>
+                    <th id="legTable_title" colspan="6">Position</th>
+                </tr>
+               
+                <tr>
+                    <th></th>
+                    <th>Quantity</th>
+                    <th>Type</th>
+                    <th>Strike</th>
+                    <th>Days To Expiration</th>
+                    <th>Contract Price</th>
+                </tr>
+
+                <tr>
+                    <td><input type="image" src="assets/plus.png" name="btn_addrow" alt="Add another leg" width="25" height="25" id="btn_addrow" onclick="addRow();" /></td>
+                    <td colspan="5"></td>
+                </tr>
+                
+            </table>
+        </div>
+
+
+    </div>
+
+    <footer>
+        <div class="copyright"><p>&copy; 2019 Venkata Alapati. MarketVista is &trade; and &copy; 2018-20 Venkata Alapati. All rights reserved.</p></div>
+    </footer>
+    
+</body>
+
+</html>
